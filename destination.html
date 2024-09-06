@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .menu-slide-down {
+        animation: slideDown 0.5s ease-out forwards;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#0B0D17",
+              blue: "#D0D6F9",
+              white: "#FEFEFE",
+            },
+            fontFamily: {
+              bellefair: ["Bellefair", "serif"],
+            },
+            backgroundImage: {
+              "earth-mobile": "url('/assets/Earth_Bg_Mobile.png')",
+              "earth-pattern": "url('/assets/Earth_Bg.png')",
+              "stars-pattern": "url('/assets/Hi_Res_render_2.png')",
+            },
+            backgroundSize: {
+              75: "75%",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="h-screen bg-stars-pattern bg-no-repeat bg-center lg:bg-cover font-bellefair"
+  >
+    <header class="flex justify-between w-full p-6">
+      <img
+        src="/assets/Logo_NavBar.png"
+        alt="Logo"
+        id="logoNavBar"
+        class="h-[48px] my-auto"
+      />
+      <div
+        class="hidden lg:flex lg:w-3/4 lg:my-auto lg:ml-4 lg:border lg:border-slate-500"
+      ></div>
+      <div id="burgerMenu">
+        <img
+          src="/assets/bars.svg"
+          alt="Burger menu"
+          id="logoMenuBurger"
+          class="w-[15%] flex ml-auto lg:hidden"
+        />
+      </div>
+      <nav
+        id="navBar"
+        class="backdrop-blur-md text-white hidden lg:flex lg:items-center lg:backdrop-blur-md lg:bg-black/50 lg:w-2/4 text-xl px-14 py-7"
+      >
+        <ul id="linksNavBar" class="flex justify-around w-full gap-8">
+          <li class="flex">
+            <a href="index.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">00</span>
+              HOME
+            </a>
+          </li>
+          <li class="flex">
+            <a href="destination.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">01</span>
+              DESTINATION
+            </a>
+          </li>
+          <li class="flex">
+            <a href="crew.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">02</span>
+              CREW
+            </a>
+          </li>
+          <li class="flex">
+            <a href="technology.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">03</span>
+              TECHNOLOGY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-col mt-6 text-white p-6 lg:flex-row">
+      <section class="text-white lg:flex lg:flex-row">
+        <div class="flex flex-col items-center lg:w-1/2">
+          <h1 class="tracking-wider text-xl lg:mb-8  lg:text-2xl">
+            <span class="text-blue tracking-wider font-bold mr-2">01</span>
+            PICK YOUR DESTINATION
+          </h1>
+          <img src="/assets/Moon.png" alt="La lune" id="imgMoon" class="w-3/4 my-5 lg:w-[67%]" />
+          <img src="/assets/Mars.png" alt="Mars" id="imgMars" class="hidden w-3/4 my-5 lg:w-[67%]" />
+          <img src="/assets/Europa.png" alt="Europa" id="imgEuropa" class="hidden w-3/4 my-5 lg:w-[67%]" />
+          <img src="/assets/Titan.png" alt="titan" id="imgTitan" class="hidden w-3/4 my-5 lg:w-[67%]" />
+        </div>
+        <div class="flex flex-col items-center lg:w-1/2">
+          <nav class="py-8 lg:mr-auto">
+            <ul class="flex gap-5 text-xl lg:text-2xl">
+              <li id="linkMoon" class="cursor-pointer border-b-2 border-white">MOON</li>
+              <li id="linkMars" class="cursor-pointer">MARS</li>
+              <li id="linkEuropa" class="cursor-pointer">EUROPA</li>
+              <li id="linkTitan" class="cursor-pointer">TITAN</li>
+            </ul>
+          </nav>
+          <article id="artMoon" class="flex flex-col items-center lg:items-start">
+            <h2 class="text-6xl mb-7 lg:text-8xl">MOON</h2>
+            <p class="text-center lg:w-3/5 lg:text-2xl lg:text-left">
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+            <div class="w-full my-6 border border-slate-500"></div>
+            <p class="text-blue tracking-wider">AVG. DISTANCE</p>
+            <p class="text-2xl">384,400 KM</p>
+            <p class="text-blue tracking-wider mt-4">EST. TRAVEL TIME</p>
+            <p class="text-2xl">3 DAYS</p>
+          </article>
+          <article id="artMars" class="hidden flex-col items-center lg:items-start">
+            <h2 class="text-6xl mb-7 lg:text-8xl">MARS</h2>
+            <p class="text-center lg:w-3/5 lg:text-2xl lg:text-left">
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+            <div class="w-full my-6 border border-slate-500"></div>
+            <p class="text-blue tracking-wider">AVG. DISTANCE</p>
+            <p class="text-2xl">225 MIL. KM</p>
+            <p class="text-blue tracking-wider mt-4">EST. TRAVEL TIME</p>
+            <p class="text-2xl">9 MONTHS</p>
+          </article>
+          <article id="artEuropa" class="hidden flex-col items-center lg:items-start">
+            <h2 class="text-6xl mb-7 lg:text-8xl">EUROPA</h2>
+            <p class="text-center lg:w-3/5 lg:text-2xl lg:text-left">
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </p>
+            <div class="w-full my-6 border border-slate-500"></div>
+            <p class="text-blue tracking-wider">AVG. DISTANCE</p>
+            <p class="text-2xl">628 MIL. KM</p>
+            <p class="text-blue tracking-wider mt-4">EST. TRAVEL TIME</p>
+            <p class="text-2xl">3 YEARS</p>
+          </article>
+          <article id="artTitan" class="hidden flex-col items-center lg:items-start">
+            <h2 class="text-6xl mb-7 lg:text-8xl">TITAN</h2>
+            <p class="text-center lg:w-3/5 lg:text-2xl lg:text-left">
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </p>
+            <div class="w-full my-6 border border-slate-500"></div>
+            <p class="text-blue tracking-wider">AVG. DISTANCE</p>
+            <p class="text-2xl">1.6 BIL. KM</p>
+            <p class="text-blue tracking-wider mt-4">EST. TRAVEL TIME</p>
+            <p class="text-2xl">7 YEARS</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

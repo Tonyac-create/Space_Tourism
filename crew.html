@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .menu-slide-down {
+        animation: slideDown 0.5s ease-out forwards;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#0B0D17",
+              blue: "#D0D6F9",
+              white: "#FEFEFE",
+            },
+            fontFamily: {
+              bellefair: ["Bellefair", "serif"],
+            },
+            backgroundImage: {
+              "earth-mobile": "url('/assets/Earth_Bg_Mobile.png')",
+              "earth-pattern": "url('/assets/Earth_Bg.png')",
+              "stars-pattern": "url('/assets/Hi_Res_render_2.png')",
+            },
+            backgroundSize: {
+              75: "75%",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="h-screen bg-stars-pattern bg-no-repeat bg-center lg:bg-cover font-bellefair"
+  >
+    <header class="flex justify-between w-full p-6">
+      <img
+        src="/assets/Logo_NavBar.png"
+        alt="Logo"
+        id="logoNavBar"
+        class="h-[48px] my-auto"
+      />
+      <div
+        class="hidden lg:flex lg:w-3/4 lg:my-auto lg:ml-4 lg:border lg:border-slate-500"
+      ></div>
+      <div id="burgerMenu">
+        <img
+          src="/assets/bars.svg"
+          alt="Burger menu"
+          id="logoMenuBurger"
+          class="w-[15%] flex ml-auto lg:hidden"
+        />
+      </div>
+      <nav
+        id="navBar"
+        class="backdrop-blur-md text-white hidden lg:flex lg:items-center lg:backdrop-blur-md lg:bg-black/50 lg:w-2/4 text-xl px-14 py-7"
+      >
+        <ul id="linksNavBar" class="flex justify-around w-full gap-8">
+          <li class="flex">
+            <a href="index.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">00</span>
+              HOME
+            </a>
+          </li>
+          <li class="flex">
+            <a href="destination.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">01</span>
+              DESTINATION
+            </a>
+          </li>
+          <li class="flex">
+            <a href="crew.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">02</span>
+              CREW
+            </a>
+          </li>
+          <li class="flex">
+            <a href="technology.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">03</span>
+              TECHNOLOGY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-col mt-6 text-white p-6 lg:flex-row">
+      <section class="text-white lg:flex lg:flex-row">
+        <div class="lg:flex lg:flex-col">
+          <div class="flex flex-col items-center lg:w-3/4 lg:items-start">
+            <h1 class="tracking-wider text-xl mb-8 lg:text-2xl">
+              <span class="text-blue tracking-wider font-bold mr-2">02</span>
+              MEET YOUR CREW
+            </h1>
+            <article
+              id="artHurley"
+              class="flex flex-col items-center lg:items-start"
+            >
+              <h2
+                class="flex flex-col items-center tracking-wider text-xl lg:items-start lg:text-3xl lg:my-8 lg:text-7xl"
+              >
+                <span class="text-blue tracking-wider font-bold mr-2 lg:text-2xl lg:my-5"
+                  >COMMANDER</span
+                >
+                DOUGLAS HURLEY
+              </h2>
+              <p class="mt-8 text-center lg:text-2xl lg:text-left">
+                Douglas Gerald Hurley is an American engineer, former Marine
+                Corps pilot and former NASA astronaut. He launched into space
+                for the third time as commander of Crew Dragon Demo-2.
+              </p>
+            </article>
+            <article
+              id="artShuttleworth"
+              class="hidden flex-col items-center lg:items-start"
+            >
+              <h2
+                class="flex flex-col items-center tracking-wider text-xl lg:items-start lg:mb-8 lg:text-7xl"
+              >
+                <span class="text-blue tracking-wider font-bold mr-2 lg:text-2xl lg:my-5"
+                  >MISSION SPECIALIST</span
+                >
+                MARK SHUTTLEWORTH
+              </h2>
+              <p class="mt-8 text-center lg:text-2xl lg:text-left">
+                Mark Richard Shuttleworth is the founder and CEO of Canonical,
+                the company behind the Linux-based Ubuntu operating system.
+                Shuttleworth became the first South African to travel to space
+                as a space tourist.
+              </p>
+            </article>
+            <article
+              id="artGlover"
+              class="hidden flex-col items-center lg:items-start"
+            >
+              <h2
+                class="flex flex-col items-center tracking-wider text-xl lg:items-start lg:mb-8 lg:text-7xl"
+              >
+                <span class="text-blue tracking-wider font-bold mr-2 lg:text-2xl lg:my-5"
+                  >PILOT</span
+                >
+                VICTOR GLOVER
+              </h2>
+              <p class="mt-8 text-center lg:text-2xl lg:text-left">
+                Pilot on the first operational flight of the SpaceX Crew Dragon
+                to the International Space Station. Glover is a commander in the
+                U.S. Navy where he pilots an F/A-18.He was a crew member of
+                Expedition 64, and served as a station systems flight engineer.
+              </p>
+            </article>
+            <article
+              id="artAnsari"
+              class="hidden flex-col items-center lg:items-start"
+            >
+              <h2
+                class="flex flex-col items-center tracking-wider text-xl lg:items-start lg:mb-8 lg:text-7xl"
+              >
+                <span class="text-blue tracking-wider font-bold mr-2 lg:text-2xl lg:my-5"
+                  >FLIGHT ENGINEER</span
+                >
+                ANOUSHEH ANSARI
+              </h2>
+              <p class="mt-8 text-center lg:text-2xl lg:text-left">
+                Anousheh Ansari is an Iranian American engineer and co-founder
+                of Prodea Systems. Ansari was the fourth self-funded space
+                tourist, the first self-funded woman to fly to the ISS, and the
+                first Iranian in space.
+              </p>
+            </article>
+          </div>
+          <div class="flex justify-center my-14 gap-4 lg:justify-start lg:my-16">
+            <div id="hurleyCircle" class="bg-white rounded-full w-4 h-4 cursor-pointer"></div>
+            <div
+              id="shuttleworthCircle"
+              class="bg-slate-500 rounded-full w-4 h-4 cursor-pointer"
+            ></div>
+            <div
+              id="gloverCircle"
+              class="bg-slate-500 rounded-full w-4 h-4 cursor-pointer"
+            ></div>
+            <div
+              id="ansariCircle"
+              class="bg-slate-500 rounded-full w-4 h-4 cursor-pointer"
+            ></div>
+          </div>
+        </div>
+        <img
+          src="/assets/Hurley.png"
+          alt="Hurley"
+          id="imgHurley"
+          class="w-3/4 mx-auto lg:w-[67%]"
+        />
+        <img
+          src="/assets/ShuttleWorth.png"
+          alt="Shuttleworth"
+          id="imgShuttleworth"
+          class="hidden w-3/4 mx-auto lg:w-[67%]"
+        />
+        <img
+          src="/assets/Glover.png"
+          alt="Glover"
+          id="imgGlover"
+          class="hidden w-3/4 mx-auto lg:w-[67%]"
+        />
+        <img
+          src="/assets/Ansari.png"
+          alt="Ansari"
+          id="imgAnsari"
+          class="hidden w-3/4 mx-auto lg:w-[67%]"
+        />
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="crew.js"></script>
+  </body>
+</html>

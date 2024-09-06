@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .menu-slide-down {
+        animation: slideDown 0.5s ease-out forwards;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#0B0D17",
+              blue: "#D0D6F9",
+              white: "#FEFEFE",
+            },
+            fontFamily: {
+              bellefair: ["Bellefair", "serif"],
+            },
+            backgroundImage: {
+              "earth-mobile": "url('/assets/Earth_Bg_Mobile.png')",
+              "earth-pattern": "url('/assets/Earth_Bg.png')",
+              "stars-pattern": "url('/assets/Hi_Res_render_2.png')",
+              "circle-pattern": "url('/assets/Hi_Res_render_4.png')",
+            },
+            backgroundSize: {
+              75: "75%",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="h-screen bg-circle-pattern bg-no-repeat bg-center lg:bg-cover font-bellefair"
+  >
+    <header class="flex justify-between w-full p-6">
+      <img
+        src="/assets/Logo_NavBar.png"
+        alt="Logo"
+        id="logoNavBar"
+        class="h-[48px] my-auto"
+      />
+      <div
+        class="hidden lg:flex lg:w-3/4 lg:my-auto lg:ml-4 lg:border lg:border-slate-500"
+      ></div>
+      <div id="burgerMenu">
+        <img
+          src="/assets/bars.svg"
+          alt="Burger menu"
+          id="logoMenuBurger"
+          class="w-[15%] flex ml-auto lg:hidden"
+        />
+      </div>
+      <nav
+        id="navBar"
+        class="backdrop-blur-md text-white hidden lg:flex lg:items-center lg:backdrop-blur-md lg:bg-black/50 lg:w-2/4 text-xl px-14 py-7"
+      >
+        <ul id="linksNavBar" class="flex justify-around w-full gap-8">
+          <li class="flex">
+            <a href="index.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">00</span>
+              HOME
+            </a>
+          </li>
+          <li class="flex">
+            <a href="destination.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">01</span>
+              DESTINATION
+            </a>
+          </li>
+          <li class="flex">
+            <a href="crew.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">02</span>
+              CREW
+            </a>
+          </li>
+          <li class="flex">
+            <a href="technology.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">03</span>
+              TECHNOLOGY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-col mt-6 text-white">
+      <h1
+        class="tracking-wider text-xl mb-8 text-center lg:text-left lg:text-2xl lg:ml-4"
+      >
+        <span class="text-blue tracking-wider font-bold mr-2">03</span>
+        SPACE LAUNCH 101
+      </h1>
+      <section class="text-white lg:flex lg:flex-row-reverse">
+        <img
+          src="/assets/Launch_Vehicle.jpg"
+          alt="Fusée"
+          class=""
+          id="imgLaunchVehicle"
+        />
+        <img
+          src="/assets/Spaceport.jpg"
+          alt="Spaceport"
+          class="hidden"
+          id="imgSpaceport"
+        />
+        <img
+          src="/assets/Space_Capsule.jpg"
+          alt="Space capsule"
+          class="hidden"
+          id="imgSpacecapsule"
+        />
+        <div class="flex gap-4 pl-4">
+          <div class="flex justify-center gap-6 my-7 lg:flex-col lg:justify-start">
+            <div
+              id="launchVehicleCircle"
+              class="flex justify-center items-center border border-white rounded-full w-9 h-9 bg-white text-black"
+            >
+              1
+            </div>
+            <div
+              id="spaceportCircle"
+              class="flex justify-center items-center border border-white rounded-full w-9 h-9 text-white"
+            >
+              2
+            </div>
+            <div
+              id="spacecapsuleCircle"
+              class="flex justify-center items-center border border-white rounded-full w-9 h-9 text-white"
+            >
+              3
+            </div>
+          </div>
+          <article
+            id="artLaunchVehicle"
+            class="flex flex-col items-center lg:items-start"
+          >
+            <h2
+              class="flex flex-col items-center tracking-wider text-4xl lg:items-start lg:text-3xl lg:my-0 lg:text-7xl"
+            >
+              <span
+                class="text-blue tracking-wider text-xl font-bold mr-2 lg:text-2xl lg:my-0"
+                >THE TERMINOLOGY…</span
+              >
+              LAUNCH VEHICLE
+            </h2>
+            <p class="mt-8 text-center text-xl p-4 lg:text-2xl lg:text-left">
+              A launch vehicle or carrier rocket is a rocket-propelled vehicle
+              used to carry a payload from Earth's surface to space, usually to
+              Earth orbit or beyond. Our WEB-X carrier rocket is the most
+              powerful in operation. Standing 150 metres tall, it's quite an
+              awe-inspiring sight on the launch pad!
+            </p>
+          </article>
+          <article
+            id="artSpaceport"
+            class="hidden flex-col items-center lg:items-start"
+          >
+            <h2
+              class="flex flex-col items-center tracking-wider text-4xl lg:items-start lg:text-3xl lg:my-0 lg:text-7xl"
+            >
+              <span
+                class="text-blue tracking-wider text-xl font-bold mr-2 lg:text-2xl lg:my-0"
+                >THE TERMINOLOGY…</span
+              >
+              SPACEPORT
+            </h2>
+            <p class="mt-8 text-center text-xl p-4 lg:text-2xl lg:text-left">
+              A spaceport or cosmodrome is a site for launching (or receiving)
+              spacecraft, by analogy to the seaport for ships or airport for
+              aircraft. Based in the famous Cape Canaveral, our spaceport is
+              ideally situated to take advantage of the Earth’s rotation for
+              launch.
+            </p>
+          </article>
+          <article
+            id="artSpacecapsule"
+            class="hidden flex-col items-center lg:items-start"
+          >
+            <h2
+              class="flex flex-col items-center tracking-wider text-4xl lg:items-start lg:text-3xl lg:my-0 lg:text-7xl"
+            >
+              <span
+                class="text-blue tracking-wider text-xl font-bold mr-2 lg:text-2xl lg:my-0"
+                >THE TERMINOLOGY…</span
+              >
+              SPACE CAPSULE
+            </h2>
+            <p class="mt-8 text-center text-xl p-4 lg:text-2xl lg:text-left">
+              A space capsule is an often-crewed spacecraft that uses a
+              blunt-body reentry capsule to reenter the Earth's atmosphere
+              without wings. Our capsule is where you'll spend your time during
+              the flight. It includes a space gym, cinema, and plenty of other
+              activities to keep you entertained.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="technology.js"></script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space Tourism</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .menu-slide-down {
+        animation: slideDown 0.5s ease-out forwards;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              black: "#0B0D17",
+              blue: "#D0D6F9",
+              white: "#FEFEFE",
+            },
+            fontFamily: {
+              bellefair: ["Bellefair", "serif"],
+            },
+            backgroundImage: {
+              "earth-mobile": "url('/assets/Earth_Bg_Mobile.png')",
+              "earth-pattern": "url('/assets/Earth_Bg.png')",
+            },
+            backgroundSize: {
+              75: "75%",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="h-screen bg-black bg-earth-mobile bg-no-repeat lg:bg-earth-pattern lg:bg-75 lg:bg-right font-bellefair"
+  >
+    <header class="flex justify-between w-full p-6 bg-black">
+      <img
+        src="/assets/Logo_NavBar.png"
+        alt="Logo"
+        id="logoNavBar"
+        class="h-[48px] my-auto"
+      />
+      <div
+        class="hidden lg:flex lg:w-3/4 lg:my-auto lg:ml-4 lg:border lg:border-slate-500"
+      ></div>
+      <div id="burgerMenu">
+        <img
+          src="/assets/bars.svg"
+          alt="Burger menu"
+          id="logoMenuBurger"
+          class="w-[15%] flex ml-auto lg:hidden"
+        />
+      </div>
+      <nav
+        id="navBar"
+        class="backdrop-blur-md text-white hidden lg:flex lg:items-center lg:backdrop-blur-md lg:bg-black/50 lg:w-2/4 text-xl px-14 py-7"
+      >
+        <ul id="linksNavBar" class="flex justify-around w-full gap-8">
+          <li class="flex">
+            <a href="index.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">00</span>
+              HOME
+            </a>
+          </li>
+          <li class="flex">
+            <a href="destination.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">01</span>
+              DESTINATION
+            </a>
+          </li>
+          <li class="flex">
+            <a href="crew.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">02</span>
+              CREW
+            </a>
+          </li>
+          <li class="flex">
+            <a href="technology.html" class="flex">
+              <span class="tracking-widest font-bold mr-2">03</span>
+              TECHNOLOGY
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="flex flex-col mt-6 text-white p-6 lg:flex-row">
+      <section class="lg:flex lg:mt-[150px]">
+        <div class="lg:w-1/2 lg:flex lg:flex-col lg:items-center">
+          <h1 class="text-blue text-2xl flex flex-col items-center lg:items-start lg:w-1/2">
+            SO, YOU WANT TO TRAVEL TO
+            <span class="text-white text-6xl mt-3 lg:text-8xl">SPACE</span>
+          </h1>
+          <p class="text-xl text-center mt-5 lg:text-left lg:w-1/2">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </div>
+        <a href="destination.html" class="lg:w-1/2 lg:flex lg:justify-center">
+          <img
+            src="/assets/Explore_Button.png"
+            alt="explore"
+            class="mx-auto mt-16 lg:flex lg:m-0"
+          />
+        </a>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
