@@ -18,12 +18,13 @@ Users should be able to:
 
 ### Screenshot
 
-<!-- ![](./assets/Screenshot_Blog_preview_card.png) -->
+![](./assets/Home_screenshot.png)  
+![](./assets/Hurley_screenshot.png)  
 
 ### Links
 
 - Solution URL: [https://github.com/Tonyac-create/Space_Tourism]
-<!-- - Live Site URL: [https://blog-preview-card-main-o325k6926-angeles-projects.vercel.app/] -->
+- Live Site URL: [https://space-tourism-eight-henna.vercel.app/]
 
 
 ### Built with
