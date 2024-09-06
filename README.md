@@ -1,4 +1,4 @@
-# Frontend Mentor - Blog preview card solution
+# Frontend Mentor - Space Tourism
 
 This is a solution to the [Space Tourism challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -22,8 +22,8 @@ Users should be able to:
 
 ### Links
 
-<!-- - Solution URL: [https://github.com/Tonyac-create/blog-preview-card-main]
-- Live Site URL: [https://blog-preview-card-main-o325k6926-angeles-projects.vercel.app/] -->
+- Solution URL: [https://github.com/Tonyac-create/Space_Tourism]
+<!-- - Live Site URL: [https://blog-preview-card-main-o325k6926-angeles-projects.vercel.app/] -->
 
 
 ### Built with
