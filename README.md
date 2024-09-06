@@ -19,7 +19,7 @@ Users should be able to:
 ### Screenshot
 
 ![](./assets/Home_screenshot.png)  
-![](./assets/Hurley_screenshot.png)  
+![](./assets/Hurley_Screenshot.png)  
 
 ### Links
 
